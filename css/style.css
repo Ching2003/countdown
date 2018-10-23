@@ -10,5 +10,22 @@ body {
 }
 h1 {
 	font-size: 4.7vw;
-	text-shadow: 0.2vw 0.1vw 0.1vw #ccc;
+}
+#h {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	overflow: hidden;
+	text-align: center;
+	background-color: #000;
+	transition: 0.7s;
+}
+#h a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 3vw;
+	display: block;
+	padding: 1vw;
 }
