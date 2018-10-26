@@ -1,12 +1,12 @@
 var x = document.getElementById('a'),
 y = document.getElementById('b');
 var c;
-var h = new Date(2019, 4, 18, 8, 20),
+const h = new Date(2019, 4, 18, 8, 20),
 h2 = new Date(2019, 0, 25, 8, 20);
 function o (a) {
 	return (a < 10) ? "0" + a :a;
 }
-setInterval("timer1()", 1000);
+setInterval(timer1, 1000);
 function timer1(){
 	var n = new Date();
 	var m = new Date (h - n);
