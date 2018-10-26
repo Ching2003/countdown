@@ -1,12 +1,32 @@
 body {
 	padding: 70px;
 	text-align: center;
-	background-image: linear-gradient(104deg,rgb(138, 241, 107),rgb(35, 141, 176));
+	background: linear-gradient(104deg,rgb(138, 241, 107),rgb(35, 141, 176));
 	color: #fff;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	user-select: none;
 	-webkit-user-select: none;
+}
+#loadBoard {
+	position: fixed;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 3s;
+}
+#loadBoard h1 {
+	font-size: 5vw;
+	opacity: 0;
+	transition: 3s
 }
 h1 {
 	font-size: 4.7vw;
@@ -24,8 +44,12 @@ h1 {
 }
 #h a {
 	text-decoration: none;
-	color: #fff;
+	color: #ccc;
 	font-size: 3vw;
 	display: block;
 	padding: 1vw;
+	transition: 0.3s;
+}
+#h a:hover {
+	color: #fff;
 }

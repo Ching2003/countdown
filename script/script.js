@@ -4,8 +4,7 @@ var c;
 var h = new Date(2019, 4, 18, 8, 20),
 h2 = new Date(2019, 0, 25, 8, 20);
 function o (a) {
-	c = (a < 10) ? "0" + a :a;
-	return c;
+	return (a < 10) ? "0" + a :a;
 }
 setInterval("timer1()", 1000);
 function timer1(){
