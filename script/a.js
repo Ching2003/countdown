@@ -4,7 +4,7 @@ var $name = document.querySelector("#name"),
 $name.addEventListener("click", fn);
 function fn () {
 	step++;
-	if (step === 6){  // 點 6下之後打開 navBar
+	if (step === 6){  // 點 下之後打開 navBar
 		step = 0;
 		nav.style.width = "100%";
 	}
