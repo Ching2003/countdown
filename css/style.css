@@ -28,7 +28,7 @@ body {
 	opacity: 0;
 	transition: 3s
 }
-h1 {
+#a, #b{
 	font-size: 4.7vw;
 }
 #h {
