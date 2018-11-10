@@ -1,7 +1,7 @@
 var x = document.getElementById('a'),
 y = document.getElementById('b');
 const h = new Date(2019, 4, 18, 8, 20),
-h2 = new Date(2019, 0, 25, 8, 20);
+h2 = new Date(2019, 0, 25, 0, 0);
 function o (a) {
 	return (a < 10) ? "0" + a :a;
 }
