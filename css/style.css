@@ -1,7 +1,7 @@
 body {
 	padding: 70px;
 	text-align: center;
-	background: linear-gradient(-37deg, #f8226c, #36b4ff);
+	background-color: linear-gradient(-37deg, #f8226c, #36b4ff);
 	color: #fff;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
