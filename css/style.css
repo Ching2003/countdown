@@ -8,6 +8,18 @@ body {
 	user-select: none;
 	-webkit-user-select: none;
 }
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: left;
+	
+}
+nav img {
+	width: 3vw;
+}
+
 #loadBoard {
 	position: fixed;
 	background-color: #000;
