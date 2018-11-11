@@ -18,3 +18,8 @@ function timer1(){
 	var rh2 = Math.floor(m2.getTime()/3600000 - r2 * 24);
 	y.innerHTML = "距離學測還有 " + r2 + "天 " + o(rh2) + "小時 " + o(m.getMinutes()) + "分鐘 " + o(m.getSeconds()) + "秒";
 }
+document.getElementById("comment").addEventListener("click", function () {
+	const tmp = document.createElement("script");
+	tmp.src = "./script/disqus.js";
+	document.body.appendChild(tmp);
+});
