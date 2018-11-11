@@ -3,10 +3,7 @@ body {
 	text-align: center;
 	background-image: linear-gradient(-37deg, #f8226c, #36b4ff);
 	color: #fff;
-	-moz-background-size:cover;
--webkit-background-size:cover;
--o-background-size:cover;
-background-size:cover;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	user-select: none;
