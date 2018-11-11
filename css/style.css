@@ -9,6 +9,9 @@ body {
 	user-select: none;
 	-webkit-user-select: none;
 }
+html {
+      min-height: 100%;
+} 
 nav {
 	position: fixed;
 	top: 0;
