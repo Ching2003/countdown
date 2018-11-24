@@ -10,4 +10,5 @@ window.onload = function(){
 		}, 3000);
 		
 	}, 3000);
+	document.getElementById("comment").click();
 }

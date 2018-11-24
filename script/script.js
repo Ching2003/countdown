@@ -5,18 +5,14 @@ h2 = new Date(2019, 0, 25, 9, 15);
 function o (a) {
 	return (a < 10) ? "0" + a :a;
 }
-setInterval(timer1, 1000);
-function timer1(){
+setInterval(timer, 1000, h, "距離會考還有 ", x);
+setInterval(timer, 1000, h2, "距離學測還有 ", y);
+function timer (h, name, target){
 	var n = new Date();
 	var m = new Date (h - n);
 	var r = Math.floor(m.getTime()/3600000/24);
 	var rh = Math.floor(m.getTime()/3600000 - r * 24);
-	x.innerHTML = "距離會考還有 " + r + "天 " + o(rh) + "小時 " + o(m.getMinutes()) + "分鐘 " + o(m.getSeconds()) + "秒";
-	var n2 = new Date();
-	var m2 = new Date (h2 - n2);
-	var r2 = Math.floor(m2.getTime()/3600000/24);
-	var rh2 = Math.floor(m2.getTime()/3600000 - r2 * 24);
-	y.innerHTML = "距離學測還有 " + r2 + "天 " + o(rh2) + "小時 " + o(m.getMinutes()) + "分鐘 " + o(m.getSeconds()) + "秒";
+	target.innerHTML = name + r + "天 " + o(rh) + "小時 " + o(m.getMinutes()) + "分鐘 " + o(m.getSeconds()) + "秒";
 }
 
 document.getElementById("comment").addEventListener("click", function () {
@@ -24,6 +20,9 @@ document.getElementById("comment").addEventListener("click", function () {
 	tmp.src = "./script/disqus.js";
 	document.body.appendChild(tmp);
 });
+
+/* 
 if (location.hash == "#comment") {
 	document.getElementById("comment").click();
 }
+ */
