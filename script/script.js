@@ -1,14 +1,18 @@
 var x = document.getElementById('a'),
 y = document.getElementById('b');
 const h = new Date(2019, 4, 18, 8, 20),
-h2 = new Date(2019, 0, 25, 9, 15);
+h2 = new Date(2018, 0, 25, 9, 15);
 function o (a) {
 	return (a < 10) ? "0" + a :a;
 }
-setInterval(timer, 1000, h, "距離會考還有 ", x);
-setInterval(timer, 1000, h2, "距離學測還有 ", y);
-function timer (h, name, target){
+setInterval(timer, 1000, h, "距離會考還有 ", x, "會考已過");
+setInterval(timer, 1000, h2, "距離學測還有 ", y, "學測已過");
+function timer (h, name, target, after){
 	var n = new Date();
+    if (h.getTime() < n.getTime()) {
+        target.innerHTML = after;
+        return false;
+    }
 	var m = new Date (h - n);
 	var r = Math.floor(m.getTime()/3600000/24);
 	var rh = Math.floor(m.getTime()/3600000 - r * 24);
