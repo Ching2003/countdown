@@ -75,4 +75,5 @@ nav img {
 	color: #fff;
 	background: linear-gradient(37deg, #f8226c, #36b4ff);
 	font-size: 5vw;
+	display: none;
 }
