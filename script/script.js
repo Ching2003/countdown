@@ -45,4 +45,5 @@ if (location.hash !== "#nocomment") {
 } else {
     document.getElementById("comment").style.display = 'none';
     document.getElementById("nav").style.display = 'none';
+    document.getElementById("name").style.display = 'none';
 }
