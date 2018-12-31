@@ -1,23 +1,38 @@
-var x = document.getElementById('a'),
-y = document.getElementById('b');
-const h = new Date(2019, 4, 18, 8, 20),
-h2 = new Date(2019, 0, 25, 9, 15);
+const container = document.getElementById('container');
 function o (a) {
-	return (a < 10) ? "0" + a :a;
+	return (a < 10) ? "0" + a : a;
 }
-setInterval(timer, 1000, h, "距離會考還有 ", x, "會考已過");
-setInterval(timer, 1000, h2, "距離學測還有 ", y, "學測已過");
-function timer (h, name, target, after){
-	var n = new Date();
-    if (h.getTime() < n.getTime()) {
-        target.innerHTML = after;
-        return false;
+
+c(new Date(2019, 4, 18, 8, 20).getTime(), '會考');
+c(new Date(2019, 0, 25, 9, 15).getTime(), '學測');
+
+function c (time, text) {
+    const target = document.createElement('h1');
+    container.appendChild(target);
+    count(time, text, target);
+    setInterval(count, 1000, time, text, target);
+}
+
+function count (time, text, target) {
+    const now = new Date().getTime();
+    if (now < time){
+        const r = time - now;
+        const day = Math.floor(r / 86400000),
+            hour = Math.floor(r % 86400000 / 3600000),
+            minute = Math.floor(r % 3600000 / 60000),
+            second = Math.floor(r % 60000 / 1000);
+        target.innerHTML = `距離${text}還有 ${day}天 ${hour}小時 ${o(minute)}分鐘 ${o(second)}秒`;
+    } else {
+        const r = now - time;
+        const day = Math.floor(r / 86400000),
+            hour = Math.floor(r % 86400000 / 3600000),
+            minute = Math.floor(r % 3600000 / 60000),
+            second = Math.floor(r % 60000 / 1000);
+        target.innerHTML = `距離${text}已過 ${day}天 ${hour}小時 ${o(minute)}分鐘 ${o(second)}秒`;
     }
-	var m = new Date (h - n);
-	var r = Math.floor(m.getTime()/3600000/24);
-	var rh = Math.floor(m.getTime()/3600000 - r * 24);
-	target.innerHTML = name + r + "天 " + o(rh) + "小時 " + o(m.getMinutes()) + "分鐘 " + o(m.getSeconds()) + "秒";
 }
+
+
 
 document.getElementById("comment").addEventListener("click", function () {
 	const tmp = document.createElement("script");
@@ -25,8 +40,9 @@ document.getElementById("comment").addEventListener("click", function () {
 	document.body.appendChild(tmp);
 });
 
-/* 
-if (location.hash == "#comment") {
-	document.getElementById("comment").click();
+if (location.hash !== "#nocomment") {
+	window.onload = function () {document.getElementById("comment").click();}
+} else {
+    document.getElementById("comment").style.display = 'none';
+    document.getElementById("nav").style.display = 'none';
 }
- */
