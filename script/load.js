@@ -7,8 +7,8 @@ window.onload = function(){
 		loadBoard.style.opacity = "0";
 		setTimeout(function(){  // 等三秒 transition 特效結束
 			loadBoard.style.display = "none";
-		}, 3000);
+		}, 2500);
 		
-	}, 3000);
+	}, 2500);
 	document.getElementById("comment").click();
 }

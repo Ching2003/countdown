@@ -37,12 +37,12 @@ nav img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 3s;
+	transition: 2.5s;
 }
 #loadBoard h1 {
 	font-size: 5vw;
 	opacity: 0;
-	transition: 3s
+	transition: 2.5s;
 }
 #a, #b{
 	font-size: 4.7vw;
