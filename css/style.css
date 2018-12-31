@@ -44,7 +44,7 @@ nav img {
 	opacity: 0;
 	transition: 2.5s;
 }
-#a, #b{
+#container h1{
 	font-size: 4.7vw;
 }
 #h {
