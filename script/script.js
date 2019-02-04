@@ -4,8 +4,6 @@ function o (a) {
 }
 
 c(new Date(2019, 4, 18, 8, 20).getTime(), new Date(2019, 4, 19, 12, 50).getTime(), '會考');
-c(new Date(2019, 0, 25, 9, 15).getTime(), new Date(2019, 0, 26, 16, 50).getTime(), '學測');
-c(new Date(2019, 6, 1, 9, 15).getTime(), new Date(2019, 6, 2, 16, 50).getTime(), '指考');
 
 function c (start, end, text) {
     const target = document.createElement('h1');
