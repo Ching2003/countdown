@@ -3,7 +3,7 @@ function o (a) {
 	return (a < 10) ? "0" + a : a;
 }
 
-c(new Date(2019, 4, 18, 8, 20).getTime(), new Date(2019, 4, 19, 12, 50).getTime(), '會考');
+c(new Date(2019, 4, 18, 8, 20).getTime(), new Date(2019, 4, 19, 12, 30).getTime(), '會考');
 
 function c (start, end, text) {
     const target = document.createElement('h1');
